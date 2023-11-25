@@ -1,6 +1,9 @@
 const express = require('express');
-const routes = require('./controllers');
-const sequelize = require('./config/connection');
+const homeRoutes = require('./controllers/homeRoutes');
+const commentRoutes = require('./controllers/api/commentsRoutes.js');
+const postRoutes = require('./controllers/api/postRoutes.js');
+const userRoutes = require('./controllers/api/userRoutes');
+const sequelize = require('./config/connections.js');
 const path = require('path');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
@@ -33,7 +36,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(routes);
+app.use('/', homeRoutes);
+app.use('/api/comments', commentRoutes);
+app.use('/api/posts', postRoutes);
+app.use('/api/users', userRoutes);
 
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));

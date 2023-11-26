@@ -6,6 +6,7 @@ const userRoutes = require('./controllers/api/userRoutes');
 const sequelize = require('./config/connections.js');
 const path = require('path');
 const session = require('express-session');
+const SequelizeStore = require('connect-session-sequelize')(session.Store); // Added line
 const exphbs = require('express-handlebars');
 const helpers = require('./utils/helpers');
 

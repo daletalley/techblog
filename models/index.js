@@ -1,3 +1,4 @@
+// Importing the required models
 const User = require('./User');
 const Post = require('./Post');
 const Comment = require('./Comments');
@@ -30,4 +31,5 @@ Post.hasMany(Comment, {
   onDelete: 'CASCADE'
 });
 
+// Exporting the models
 module.exports = { User, Post, Comment };

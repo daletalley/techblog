@@ -1,15 +1,10 @@
 const router = require('express').Router();
-
 const userRoutes = require('./userRoutes');
 const postRoutes = require('./postRoutes');
-const commentRoutes = require('./commentsRoutes');
-
-// Add comments here
-// This is the main API router file
-// It defines the routes for users, posts, and comments
+const commentRoutes = require('./commentRoutes');
 
 router.use('/users', userRoutes);
 router.use('/posts', postRoutes);
-router.use('/comments', commentRoutes);
+router.use('/comment', commentRoutes);
 
 module.exports = router;

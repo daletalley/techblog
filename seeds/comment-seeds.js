@@ -1,23 +1,33 @@
-// Importing the Comment model
-const { Comment } = require('../models');
+const Comment = require('../models/comment');
 
-// Array of comment data
 const commentData = [
-  {
-    comment_text: "Great post!", // Comment text for the first comment
-    user_id: 1, // User ID for the first comment
-    post_id: 1 // Post ID for the first comment
-  },
-  {
-    comment_text: "Very informative, thanks!", // Comment text for the second comment
-    user_id: 2, // User ID for the second comment
-    post_id: 2 // Post ID for the second comment
-  },
-  // Add more seed data as needed
+    {
+        description: "Amazing!",
+        post_id: 1,
+        user_id: 1,
+    },
+    {
+        description: "Yes!",
+        post_id: 3,
+        user_id: 2,
+    },
+    {
+        description: "Nice!",
+        post_id: 2,
+        user_id: 4,
+    },
+    {
+        description: "Cool!",
+        post_id: 4,
+        user_id: 2,
+    },
+    {
+        description: "Awesome!",
+        post_id: 4,
+        user_id: 3,
+    },
 ];
 
-// Function to seed comments
 const seedComments = () => Comment.bulkCreate(commentData);
 
-// Exporting the seedComments function
 module.exports = seedComments;

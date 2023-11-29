@@ -1,21 +1,24 @@
-// Importing the User model from '../models'
-const { User } = require('../models');
+const User = require('../models/user');
 
-// Array of user data to be seeded
 const userData = [
-  {
-    username: "user1",
-    password: "password123"
-  },
-  {
-    username: "user2",
-    password: "password123"
-  },
-  // Add more seed data as needed
-];
+        {
+            username: "daletalley",
+            password: "00000",
+        },
+        {
+            username: "markzuckerberg",
+            password: "11111",
+        },
+        {
+            username: "billgates",
+            password: "22222",
+        },
+        {
+            username: "elonmusk",
+            password: "33333",
+        },
+    ];
 
-// Function to seed the users by bulk creating them using the User model
 const seedUsers = () => User.bulkCreate(userData);
 
-// Exporting the seedUsers function to be used in other files
 module.exports = seedUsers;

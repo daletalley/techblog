@@ -1,10 +1,11 @@
 <nav class="navbar">
-    <a href="/">Home</a>
-    {{#if loggedIn}}
-        <a href="/dashboard">Dashboard</a>
-        <a href="/logout">Logout</a>
-    {{else}}
+    <div>
+        {{#if logged_in}}
+        <a href="/">Homepage</a>
+        <a href="/post">Dashboard</a>
+        <a id="logout">Logout</a>
+        {{else}}
         <a href="/login">Login</a>
-        <a href="/signup">Sign Up</a>
-    {{/if}}
+        {{/if}}
+    </div>
 </nav>

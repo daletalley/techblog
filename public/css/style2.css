@@ -1,0 +1,34 @@
+.navbar {
+    background-color: #001730;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.874);
+}
+
+.navbar a {
+    color: rgb(137, 178, 255);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+    margin-left: 2.5rem;
+}
+
+.navbar a:hover {
+    color: #ff00f2ab;
+}
+
+.card-space {
+    margin-bottom: 2rem;
+}
+
+.card-space h2,
+.idv-card h4,
+.idv-card h6 {
+    margin-bottom: .5rem;
+}
+
+.lucid h2 {
+    color: #497dffb5;
+}

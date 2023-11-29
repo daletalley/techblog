@@ -4,7 +4,7 @@ const commentFormHandler = async (event) => {
     const description = document.querySelector("#comment-description").value.trim();
 
     if (description) {
-        const response = await fetch (`/comment`, {
+        const response = await fetch (`/api/comment`, {
             method: 'POST',
             body: JSON.stringify({ description }),
             headers: {

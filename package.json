@@ -9,6 +9,9 @@
     "seed": "node seeds/index.js",
     "watch": "nodemon server.js"
   },
+  "engines": {
+    "node": "20.5.0"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {

@@ -8,22 +8,23 @@ One of the highlights of this project is its user authentication system, which e
 
 ## Setting It Up Locally
 
-If you're interested in running Tech Blog on your own machine, here's how you can do it:
+If you're interested in running Tech Blog on your machine, here's how you can do it:
 
 1. First, clone the repository:
 git clone git@github.com:daletalley/techblog.git
 
 2. Then, navigate to the project directory:
-cd tech-blog
+cd techblog
 
 3. Install all the necessary dependencies:
 npm install
 
-4. Make sure you have MySQL set up on your system, then initialize the database:
-npm run db:init
+4. Make sure you have MySQL set up on your system:
+   >mysql source schema.sql
+npm run seed
 
 5. Finally, start the server to get things running:
-npm start
+npm run start
 
 ## How to Use
 
@@ -35,5 +36,7 @@ My Tech Blog is designed as a blogging platform for tech enthusiasts. Here are s
 - **Responsive Design**: The application is fully responsive, ensuring a smooth experience across different devices.
 - **Security and Session Management**: I've implemented advanced authentication mechanisms to keep user data secure, including auto-logout for added safety.
 
+## Deployment
+  comingSoon
 ## Screenshots
-
+  Comingsoon
